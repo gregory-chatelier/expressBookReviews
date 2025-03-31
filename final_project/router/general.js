@@ -19,6 +19,7 @@ const doesExist = (username) => {
     }
 }
 
+
 // Register a new user
 public_users.post("/register", (req, res) => {
     const username = req.body.username;
@@ -79,10 +80,17 @@ public_users.post("/login", (req, res) => {
     }
 });
 
+
+
+
+
 // Get the book list available in the shop
 public_users.get('/', function (req, res) {
     res.send(JSON.stringify(books, null, 4));
 });
+
+
+
 
 
 public_users.put("/auth/review/:isbn", (req, res) => {
